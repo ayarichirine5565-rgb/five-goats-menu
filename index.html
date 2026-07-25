@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Five Goats Coffee Shop — Menu</title>
+<meta name="description" content="Five Goats Coffee Shop digital menu — Taste the Craft.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <img src="images/logo.png" alt="" width="90" height="85">
+  </div>
+</div>
+
+<!-- Decorative floating background shapes -->
+<div class="bg-decor" aria-hidden="true">
+  <span class="blob blob-1"></span>
+  <span class="blob blob-2"></span>
+  <span class="blob blob-3"></span>
+</div>
+
+<!-- Sticky Nav -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand" aria-label="Five Goats Coffee Shop, back to top">
+      <img src="images/logo.png" alt="Five Goats Coffee Shop logo" width="36" height="34">
+      <span>Five&nbsp;Goats</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Menu sections">
+      <a href="#coffee" data-nav>Coffee</a>
+      <a href="#tea" data-nav>Tea</a>
+      <a href="#refreshers" data-nav>Refreshers</a>
+      <a href="#breakfast" data-nav>Crêpes &amp; Breakfast</a>
+      <a href="#mains" data-nav>Mains</a>
+      <a href="#lounge" data-nav>Chicha &amp; Desserts</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+  <div class="hero-content">
+    <img src="images/logo.png" alt="Five Goats Coffee Shop logo — goat head emblem" class="hero-logo" width="220" height="209">
+    <h1 class="hero-title">MENU</h1>
+    <p class="hero-tagline">Taste the Craft<span class="dots">..</span></p>
+    <a href="#coffee" class="hero-cta">Explore the Menu</a>
+  </div>
+  <div class="hero-scroll-cue" aria-hidden="true"><span></span></div>
+</section>
+
+<main>
+
+  <!-- ================= COFFEE ================= -->
+  <section class="menu-page" id="coffee">
+    <h2 class="page-eyebrow" data-reveal>Warm &amp; Iced Coffee</h2>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/hot-coffee.jpg" alt="Latte with heart-shaped latte art in a black cup" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Hot Coffee</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Express</span><span class="item-price">3,500</span></li>
+          <li><span class="item-name">Americain</span><span class="item-price">4,000</span></li>
+          <li><span class="item-name">Capucin</span><span class="item-price">4,000</span></li>
+          <li><span class="item-name">Macchiato</span><span class="item-price">4,000</span></li>
+          <li><span class="item-name">Latte</span><span class="item-price">4,500</span></li>
+          <li><span class="item-name">Nesquik</span><span class="item-price">5,000</span></li>
+          <li><span class="item-name">Nescafé</span><span class="item-price">6,000</span></li>
+          <li><span class="item-name">Cappuccino</span><span class="item-price">6,500</span></li>
+          <li><span class="item-name">Café Turk</span><span class="item-price">6,000</span></li>
+          <li><span class="item-name">V60</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Double V60</span><span class="item-price">18,000</span></li>
+          <li><span class="item-name">Café aromatisé</span><span class="item-price">7,500</span></li>
+          <li><span class="item-name">Cocoa</span><span class="item-price">8,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/iced-coffee.jpg" alt="Iced coffee served in a mason jar with a straw" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Iced Coffee</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Iced americano</span><span class="item-price">7,000</span></li>
+          <li><span class="item-name">Iced creamy americano</span><span class="item-price">7,500</span></li>
+          <li><span class="item-name">Iced spanish latte</span><span class="item-price">8,000</span></li>
+          <li><span class="item-name">Iced caramel latte</span><span class="item-price">8,500</span></li>
+          <li><span class="item-name">Iced vanilla latte</span><span class="item-price">8,500</span></li>
+          <li><span class="item-name">Iced brownies latte</span><span class="item-price">8,500</span></li>
+          <li><span class="item-name">Iced noisette latte</span><span class="item-price">8,500</span></li>
+          <li><span class="item-name">Blue iced latte</span><span class="item-price">9,000</span></li>
+          <li><span class="item-name">Strawberry iced latte</span><span class="item-price">9,000</span></li>
+          <li><span class="item-name">Cinnamon honey iced latte</span><span class="item-price">9,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/hot-chocolate.jpg" alt="Hot chocolate topped with mini marshmallows and cocoa powder" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Hot Chocolate</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Classic</span><span class="item-price">7,000</span></li>
+          <li><span class="item-name">Creamy chocolate</span><span class="item-price">8,500</span></li>
+          <li><span class="item-name">Oreo hot chocolate</span><span class="item-price">9,000</span></li>
+          <li><span class="item-name">Pistachio hot chocolate</span><span class="item-price">9,000</span></li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= TEA ================= -->
+  <section class="menu-page alt-bg" id="tea">
+    <h2 class="page-eyebrow" data-reveal>Thé &amp; Infusions</h2>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/the-vert.jpg" alt="Cup of green tea with fresh mint leaves and lemon" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Thé</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Thé vert</span><span class="item-price">3,000</span></li>
+          <li><span class="item-name">Thé aux amandes</span><span class="item-price">7,500</span></li>
+          <li><span class="item-name">Thé pignon</span><span class="item-price">9,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/the-infusion.jpg" alt="Cup of black tea infusion with tea bag" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Thé Infusion</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Relaxation</span><span class="item-price">5,000</span></li>
+          <li><span class="item-name">Energy</span><span class="item-price">5,000</span></li>
+          <li><span class="item-name">Slim</span><span class="item-price">5,000</span></li>
+          <li><span class="item-name">Sleep</span><span class="item-price">5,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/iced-boba.jpg" alt="Strawberry iced boba tea in a mason jar with fresh strawberry" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Iced Boba Tea</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Iced boba strawberry</span><span class="item-price">9,500</span></li>
+          <li><span class="item-name">Iced boba mango</span><span class="item-price">9,500</span></li>
+          <li><span class="item-name">Iced boba black berry</span><span class="item-price">9,500</span></li>
+          <li><span class="item-name">Iced boba pastèque</span><span class="item-price">9,500</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/iced-tea.jpg" alt="Iced tea with lemon slices and mint in a mason jar" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Iced Tea</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Iced fruit rouge</span><span class="item-price">8,000</span></li>
+          <li><span class="item-name">Iced mango</span><span class="item-price">8,000</span></li>
+          <li><span class="item-name">Iced peaches</span><span class="item-price">8,000</span></li>
+          <li><span class="item-name">Iced framboise</span><span class="item-price">8,000</span></li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= REFRESHERS: Jus / Mojito / Smoothie / Cocktails / Milkshakes ================= -->
+  <section class="menu-page" id="refreshers">
+    <h2 class="page-eyebrow" data-reveal>Juices, Mojitos &amp; Cocktails</h2>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/jus.jpg" alt="Fresh orange juice in a mason jar with an orange slice" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Jus</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Orange</span><span class="item-price">6,000</span></li>
+          <li><span class="item-name">Citronnade</span><span class="item-price">7,000</span></li>
+          <li><span class="item-name">Fraise</span><span class="item-price">8,000</span></li>
+          <li><span class="item-name">Kiwi</span><span class="item-price">9,000</span></li>
+          <li><span class="item-name">Pomme</span><span class="item-price">9,000</span></li>
+          <li><span class="item-name">Peache</span><span class="item-price">9,000</span></li>
+          <li><span class="item-name">Banane</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Ananas</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Mangue</span><span class="item-price">14,000</span></li>
+          <li><span class="item-name">Pastèque</span><span class="item-price">14,000</span></li>
+          <li><span class="item-name">Melon</span><span class="item-price">14,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/mojito.jpg" alt="Blue Hawaiian mojito with mint and lime in a mason jar" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Mojito</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Virgin mojito</span><span class="item-price">9,000</span></li>
+          <li><span class="item-name">Blue hawaïenne mojito</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Strawberry mojito</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Kiwi mojito</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Black berry mojito</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Passion fruit mojito</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Pastèque mojito</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Pinacolada mojito</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Tropical mojito</span><span class="item-price">14,000</span></li>
+          <li><span class="item-name">The géant mojito</span><span class="item-price">25,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/smoothie.jpg" alt="Strawberry smoothie topped with whipped cream and fresh strawberries" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Smoothie</h3>
+        <ul class="item-list has-notes">
+          <li><span class="item-name">Banana island<small>Dattes, banane, fruit sec, miel</small></span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">All berries<small>Fraise, framboise, banane</small></span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">Tropical ocean<small>Mangue, fruit de passion, banane</small></span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">All green<small>Kiwi, avocat, banane, granola</small></span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">All chocolate<small>Banane, chocolat, cacao, fruit sec</small></span><span class="item-price">16,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/cocktails.jpg" alt="Dragon fruit cocktail with watermelon garnish in a mason jar" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Cocktails</h3>
+        <ul class="item-list has-notes">
+          <li><span class="item-name">Flamingo<small>Dragon fruit, pastèque</small></span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Ocean Sunrise<small>Bleu hawaïen, citron, ananas, fruit de la passion</small></span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Triple cloud<small>Noix de coco, ananas, litchi</small></span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Cotton candy world<small>Soda, bubblegum, barbe de papa, five g arome</small></span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Top G<small>BlackBerry, blueberry, fruit de dragon</small></span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Rainbow Paradise<small>Pinacolada, mangue, bleu hawaïen, fromboise</small></span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Zeus<small>Soda, jus mangue, Cerise, fraise, five g arome</small></span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Fuego<small>Soda, jus tropical, mango, spicy paprika, fruit de la passion</small></span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Bleu océan<small>Citron, bleu hawaïen, ananas, litchi</small></span><span class="item-price">15,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/milkshakes.jpg" alt="Oreo milkshake topped with whipped cream and an Oreo cookie" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Milkeshakes</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Caramel milkeshake</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Vanille milkshake</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Strawberry milkeshake</span><span class="item-price">12,000</span></li>
+          <li><span class="item-name">Nutella milkeshake</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Banutella milkeshake</span><span class="item-price">14,000</span></li>
+          <li><span class="item-name">Blue Oreo milkshake</span><span class="item-price">14,000</span></li>
+          <li><span class="item-name">Chocolat brownies milkshake</span><span class="item-price">14,000</span></li>
+          <li><span class="item-name">Spéculos milkshake</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Bubblegum milkshake</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Tropical milkshake</span><span class="item-price">13,000</span></li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= BREAKFAST: Crêpes / Omlette / Pancake / Bruschetta / Pain perdu ================= -->
+  <section class="menu-page alt-bg" id="breakfast">
+    <h2 class="page-eyebrow" data-reveal>Crêpes &amp; Breakfast</h2>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/crepes-salees.jpg" alt="Folded ham and cheese savory crêpe, garnished with chives" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Crêpes Salées</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Crêpe jambon</span><span class="item-price">11,000</span></li>
+          <li><span class="item-name">Crêpe thon</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Crêpe tunisienne</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Mexican chicken</span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">Creamy chicken breast</span><span class="item-price">18,000</span></li>
+          <li><span class="item-name">Pesto chicken breast</span><span class="item-price">20,000</span></li>
+          <li><span class="item-name">Creamy chicken truffe</span><span class="item-price">25,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/omlette.jpg" alt="Omelette with herbs, served with slices of toasted bread" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Omlette</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Jambon</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Thon</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Végétarienne</span><span class="item-price">13,500</span></li>
+          <li><span class="item-name">Mexican chicken</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Creamy chicken breast</span><span class="item-price">17,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/crepes-sucrees.jpg" alt="Sweet crêpe triangle with banana, strawberry and chocolate drizzle" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Crêpes Sucrées</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Honey</span><span class="item-price">10,000</span></li>
+          <li><span class="item-name">Nutella kingdom</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Nutella brownies</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Banatella</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Pistachio ocean</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Oreo castle</span><span class="item-price">15,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/pancake.jpg" alt="Stack of pancakes with chocolate drizzle, powdered sugar and raspberry" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Pancake</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Honey moon</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Nutella kingdom</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Banatella</span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">Oreo castle</span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">Nutella nuts</span><span class="item-price">18,000</span></li>
+          <li><span class="item-name">Pistachio</span><span class="item-price">20,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/bruschetta.jpg" alt="Avocado and salmon bruschetta on toasted bread" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Bruschetta</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Bruschetta Tono</span><span class="item-price">15,500</span></li>
+          <li><span class="item-name">Bruschetta chicken &amp; Mushrooms</span><span class="item-price">16,500</span></li>
+          <li><span class="item-name">Bruschetta bacon &amp; eggs</span><span class="item-price">17,000</span></li>
+          <li><span class="item-name">Bruschetta avocato &amp; crevette</span><span class="item-price">23,000</span></li>
+          <li><span class="item-name">Bruschetta poulet fumé</span><span class="item-price">25,000</span></li>
+          <li><span class="item-name">Bruschetta avocat &amp; Saumon</span><span class="item-price">26,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/pain-perdu.jpg" alt="Pain perdu topped with ice cream, berries and caramel sauce" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Pain Perdu</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Pistachio</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Créme caramel</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Nutella</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Oreo</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Tiramisu</span><span class="item-price">17,000</span></li>
+          <li><span class="item-name">Banana cream</span><span class="item-price">20,000</span></li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= MAINS: Les Plats / Salades / Ojja / Pâtes / Ciabatta / Club Sandwich ================= -->
+  <section class="menu-page" id="mains">
+    <h2 class="page-eyebrow" data-reveal>Les Plats &amp; Mains</h2>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/les-plats.jpg" alt="Grilled chicken plate with rice, grilled vegetables and salad" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Les Plats</h3>
+        <ul class="item-list has-notes">
+          <li><span class="item-name">Escalope grillée<small>Escalope grillée, salade, pâtes au choix ou riz, potatoes</small></span><span class="item-price">23,000</span></li>
+          <li><span class="item-name">Escalope pané<small>Escalope pané, salade, pâtes au choix ou riz, potatoes</small></span><span class="item-price">27,000</span></li>
+          <li><span class="item-name">Escalope à la crème<small>Escalope à la créme, salade, pâtes au choix ou riz, potatoes</small></span><span class="item-price">30,000</span></li>
+          <li><span class="item-name">Poisson grillée<small>Poisson grillée, salade, pâtes au choix ou riz, potatoes</small></span><span class="item-price">35,000</span></li>
+          <li><span class="item-name">Crevettes grillées<small>Crevettes grillée, salade, pâtes au choix ou riz, potatoes</small></span><span class="item-price">40,000</span></li>
+          <li><span class="item-name">Big G <em>(2 Pers)</em><small>Escalope grillée et panée, merguez, potatoes, salade, pâtes au choix, riz</small></span><span class="item-price">70,000</span></li>
+          <li><span class="item-name">Great G <em>(4 Pers)</em><small>Escalope grillée et panée, merguez, potatoes, salade, 2 pâtes au choix, riz, crevettes panées</small></span><span class="item-price">120,000</span></li>
+          <li><span class="item-name">Five G<small>Escalope grillée et panée, merguez, crevettes grillées, crevettes panées, poisson grillé, potatoes, salade, 2 pâtes au choix, riz</small></span><span class="item-price">190,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/les-salades.jpg" alt="Caesar salad with grilled chicken and croutons" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Les Salades</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Salades César</span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">Salades buratta</span><span class="item-price">25,000</span></li>
+          <li><span class="item-name">Salades tropical</span><span class="item-price">35,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/ojja.jpg" alt="Ojja with fried eggs in tomato sauce, served with bread" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Ojja</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Ojja escalope</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Ojja merguez</span><span class="item-price">17,000</span></li>
+          <li><span class="item-name">Ojja crevette</span><span class="item-price">23,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/les-pates.jpg" alt="Creamy chicken pasta plate" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Les Pâtes</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Puttanesca</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Chicken pasta</span><span class="item-price">17,000</span></li>
+          <li><span class="item-name">Carbonara</span><span class="item-price">17,000</span></li>
+          <li><span class="item-name">Alfredo</span><span class="item-price">19,500</span></li>
+          <li><span class="item-name">Pesto</span><span class="item-price">20,000</span></li>
+          <li><span class="item-name">Pasta crevette</span><span class="item-price">28,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/ciabatta.jpg" alt="Ciabatta sandwich served with a side of fries" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Ciabatta</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Ciabatta tunisienne</span><span class="item-price">15,000</span></li>
+          <li><span class="item-name">Ciabatta escalope</span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">Ciabatta escalope pané</span><span class="item-price">17,000</span></li>
+          <li><span class="item-name">Ciabatta escalope champignon</span><span class="item-price">18,000</span></li>
+          <li><span class="item-name">Ciabatta crevette</span><span class="item-price">19,000</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/club-sandwich.jpg" alt="Club sandwich halves with a side of fries" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Club Sandwich</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Jambon</span><span class="item-price">12,000</span></li>
+          <li><span class="item-name">Thon</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Escalope</span><span class="item-price">14,000</span></li>
+          <li><span class="item-name">Escalope champion</span><span class="item-price">16,000</span></li>
+          <li><span class="item-name">Crevette</span><span class="item-price">18,000</span></li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= LOUNGE: Chicha / Drinks / Desserts ================= -->
+  <section class="menu-page alt-bg" id="lounge">
+    <h2 class="page-eyebrow" data-reveal>Chicha, Drinks &amp; Desserts</h2>
+
+    <article class="category chicha-block" data-reveal>
+      <div class="category-media">
+        <img src="images/chicha.jpg" alt="Copper-toned chicha hookah pipe" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Chicha</h3>
+        <table class="chicha-table">
+          <thead>
+            <tr><th scope="col">Flavor</th><th scope="col">Turk</th><th scope="col">Kaloud</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Menthe</th><td>12</td><td>14</td></tr>
+            <tr><th scope="row">Raisan menthe</th><td>12</td><td>14</td></tr>
+            <tr><th scope="row">Pomme</th><td>12</td><td>14</td></tr>
+            <tr><th scope="row">Raisan sec</th><td>12</td><td>14</td></tr>
+            <tr><th scope="row">Chikh money</th><td>13</td><td>15</td></tr>
+            <tr><th scope="row">Love</th><td>13</td><td>15</td></tr>
+            <tr><th scope="row">Bubblegum</th><td>13</td><td>15</td></tr>
+            <tr><th scope="row">Hawaï</th><td>13</td><td>15</td></tr>
+            <tr><th scope="row">Mia more</th><td>13</td><td>15</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="category reverse" data-reveal>
+      <div class="category-media">
+        <img src="images/drinks.jpg" alt="Glass of water with ice cubes" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Drinks</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Eaux 0,5</span><span class="item-price">2,000</span></li>
+          <li><span class="item-name">Eaux 1 litre</span><span class="item-price">2,500</span></li>
+          <li><span class="item-name">Eaux gazéifiées</span><span class="item-price">3,500</span></li>
+          <li><span class="item-name">Soda aux choix</span><span class="item-price">4,500</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="category" data-reveal>
+      <div class="category-media">
+        <img src="images/desserts.jpg" alt="Slice of cheesecake drizzled with caramel" loading="lazy" width="900" height="900">
+      </div>
+      <div class="category-content">
+        <h3 class="cat-title">Desserts</h3>
+        <ul class="item-list">
+          <li><span class="item-name">Croissant glacé</span><span class="item-price">8,000</span></li>
+          <li><span class="item-name">Cheesecake</span><span class="item-price">11,000</span></li>
+          <li><span class="item-name">Tiramisu</span><span class="item-price">13,000</span></li>
+          <li><span class="item-name">Banana split</span><span class="item-price">14,000</span></li>
+          <li><span class="item-name">Assiette de fruits</span><span class="item-price">30,000</span></li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <img src="images/logo.png" alt="Five Goats Coffee Shop logo" class="footer-logo" width="70" height="66" loading="lazy">
+  <p class="footer-tagline">Taste the Craft<span class="dots">..</span></p>
+  <div class="footer-socials">
+    <a href="#" aria-label="Facebook: Five Goats coffeeshop">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+      <span>Five Goats coffeeshop</span>
+    </a>
+    <a href="#" aria-label="Instagram: THE FIVE GOATS">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.3 2.9.6.8.3 1.5.7 2.1 1.4.7.6 1.1 1.3 1.4 2.1.3.8.5 1.7.6 2.9.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.1-.6 2.9-.3.8-.7 1.5-1.4 2.1-.6.7-1.3 1.1-2.1 1.4-.8.3-1.7.5-2.9.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.1-.3-2.9-.6-.8-.3-1.5-.7-2.1-1.4-.7-.6-1.1-1.3-1.4-2.1-.3-.8-.5-1.7-.6-2.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2.1.6-2.9.3-.8.7-1.5 1.4-2.1.6-.7 1.3-1.1 2.1-1.4.8-.3 1.7-.5 2.9-.6C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1 0-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c0 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1 0 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 4.6a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 1.8a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2zm5.6-2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/></svg>
+      <span>THE FIVE GOATS</span>
+    </a>
+    <a href="#" aria-label="TikTok: five.goats">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M14 2h3.2c.2 1.6 1.3 3 2.8 3.6V9c-1.6 0-3-.5-4.2-1.3v6.8a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.3a2.7 2.7 0 1 0 1.9 2.6V2z"/></svg>
+      <span>five.goats</span>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Five Goats Coffee Shop. All rights reserved.</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
