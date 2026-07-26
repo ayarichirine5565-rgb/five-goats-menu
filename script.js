@@ -25,6 +25,18 @@
     setTimeout(hideLoader, 2200);
   }
 
+  /* ---------- Scroll progress bar ---------- */
+  var scrollProgress = document.getElementById("scrollProgress");
+  function onScrollProgress() {
+    if (!scrollProgress) return;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+    scrollProgress.style.width = pct + "%";
+  }
+  onScrollProgress();
+  window.addEventListener("scroll", onScrollProgress, { passive: true });
+  window.addEventListener("resize", onScrollProgress);
+
   /* ---------- Sticky nav shadow/background on scroll ---------- */
   var siteNav = document.getElementById("siteNav");
   var lastScrollY = window.scrollY;
@@ -97,6 +109,22 @@
     revealTargets.forEach(function (t) { reveal.observe(t); });
   } else {
     revealTargets.forEach(function (t) { t.classList.add("in-view"); });
+  }
+
+  /* ---------- Subtle tilt on category images (desktop, mouse-driven) ---------- */
+  if (!reduceMotion && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    document.querySelectorAll(".category-media").forEach(function (media) {
+      media.addEventListener("mousemove", function (e) {
+        var rect = media.getBoundingClientRect();
+        var x = (e.clientX - rect.left) / rect.width - 0.5;
+        var y = (e.clientY - rect.top) / rect.height - 0.5;
+        media.style.transform =
+          "perspective(700px) rotateY(" + (x * 8) + "deg) rotateX(" + (-y * 8) + "deg) scale(1.02)";
+      });
+      media.addEventListener("mouseleave", function () {
+        media.style.transform = "";
+      });
+    });
   }
 
   /* ---------- Gentle parallax on hero ---------- */

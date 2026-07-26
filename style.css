@@ -25,6 +25,17 @@
 
 * { box-sizing: border-box; }
 
+/* Custom warm scrollbar for a crafted, considered feel */
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb {
+  background: var(--cocoa);
+  border-radius: 8px;
+  border: 2px solid var(--cream);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--maroon); }
+html { scrollbar-color: var(--cocoa) var(--cream); scrollbar-width: thin; }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
@@ -48,6 +59,30 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle paper-grain texture for a crafted, tactile feel */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--cocoa), var(--cocoa-light));
+  z-index: 600;
+  transition: width .1s linear;
 }
 
 img { max-width: 100%; display: block; }
@@ -137,7 +172,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--maroon);
   flex-shrink: 0;
 }
-.nav-brand img { border-radius: 50%; }
+.nav-brand img { border-radius: 50%; transition: transform .5s var(--ease); }
+.nav-brand:hover img { transform: rotate(-14deg) scale(1.08); }
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -202,6 +238,24 @@ ul { margin: 0; padding: 0; list-style: none; }
     radial-gradient(circle at 18% 20%, rgba(139,94,52,0.35), transparent 55%),
     radial-gradient(circle at 82% 78%, rgba(184,131,79,0.25), transparent 50%);
   will-change: transform;
+}
+.hero-watermark {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: min(900px, 130vw);
+  height: min(900px, 130vw);
+  transform: translate(-50%, -50%);
+  background: url("images/logo.png") center/contain no-repeat;
+  opacity: 0.05;
+  z-index: -1;
+  animation: watermarkSpin 90s linear infinite;
+}
+@keyframes watermarkSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-watermark { animation: none; }
 }
 .hero-content {
   padding: 40px 24px;
@@ -337,19 +391,40 @@ main { position: relative; z-index: 1; }
   aspect-ratio: 1 / 1;
   box-shadow: var(--shadow-card);
   background: var(--cream-dim);
+  transform-style: preserve-3d;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  will-change: transform;
+}
+.category-media:hover {
+  box-shadow: 0 26px 50px -18px rgba(42,20,20,0.4);
 }
 .category-media img {
   width: 100%; height: 100%;
   object-fit: cover;
   transition: transform .7s var(--ease);
 }
-.category-media:hover img { transform: scale(1.08) rotate(0.3deg); }
+.category-media:hover img { transform: scale(1.1) rotate(0.3deg); }
 .category-media::after {
   content: "";
   position: absolute; inset: 0;
   border-radius: var(--radius-lg);
   box-shadow: inset 0 0 0 1px rgba(42,20,20,0.06);
   pointer-events: none;
+}
+/* Diagonal shine sweep on hover */
+.category-media::before {
+  content: "";
+  position: absolute;
+  top: -60%; left: -60%;
+  width: 40%; height: 220%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
+  transform: rotate(20deg) translateX(-120%);
+  transition: transform .8s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+.category-media:hover::before {
+  transform: rotate(20deg) translateX(320%);
 }
 
 .cat-title {
@@ -377,7 +452,27 @@ main { position: relative; z-index: 1; }
   padding: 10px 0;
   border-bottom: 1px dotted var(--cream-line);
   font-size: 0.98rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity .5s var(--ease), transform .5s var(--ease), background-color .3s var(--ease);
 }
+.category.in-view .item-list li {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* Stagger each row's entrance slightly after the previous one */
+.item-list li:nth-child(1) { transition-delay: .05s; }
+.item-list li:nth-child(2) { transition-delay: .1s; }
+.item-list li:nth-child(3) { transition-delay: .15s; }
+.item-list li:nth-child(4) { transition-delay: .2s; }
+.item-list li:nth-child(5) { transition-delay: .25s; }
+.item-list li:nth-child(6) { transition-delay: .3s; }
+.item-list li:nth-child(7) { transition-delay: .35s; }
+.item-list li:nth-child(8) { transition-delay: .4s; }
+.item-list li:nth-child(9) { transition-delay: .45s; }
+.item-list li:nth-child(10) { transition-delay: .5s; }
+.item-list li:nth-child(n+11) { transition-delay: .55s; }
+.item-list li:hover { background: rgba(139,94,52,0.06); border-radius: 8px; }
 .item-list li:last-child { border-bottom: none; }
 .item-name {
   font-weight: 500;
@@ -406,6 +501,45 @@ main { position: relative; z-index: 1; }
   background: var(--cocoa);
   color: var(--cream);
   transform: translateY(-1px);
+}
+
+/* Signature dish highlight — special touch for the flagship item */
+.item-list li.is-signature {
+  position: relative;
+  margin-top: 6px;
+  padding: 16px 14px;
+  border: 1.5px solid var(--cocoa-light);
+  border-radius: 14px;
+  background: linear-gradient(100deg, rgba(139,94,52,0.09), rgba(184,131,79,0.14));
+  animation: signatureGlow 3.2s ease-in-out infinite;
+}
+.item-list li.is-signature .item-name {
+  font-weight: 700;
+}
+.signature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-head);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: var(--maroon);
+  padding: 3px 10px 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 4px;
+  width: fit-content;
+}
+.signature-badge::before { content: "★"; font-size: 0.7rem; color: var(--cocoa-light); }
+.item-list li.is-signature .item-price {
+  background: var(--maroon);
+  color: var(--cream);
+}
+@keyframes signatureGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184,131,79,0.35); }
+  50% { box-shadow: 0 0 0 7px rgba(184,131,79,0); }
 }
 
 /* Chicha pricing table */
